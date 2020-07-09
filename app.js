@@ -4,29 +4,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorContainer = document.querySelector('#bg-container')
     const colorBtn = document.querySelector('#color-btn')
 
-    const colors = ['yellow', 'red', 'green', 'blue']
-    let leftColor
-    let rightColor
+    let rgbaMax = 255
+    let opacity = 1
+    let leftColor = 'rgba(255, 255, 255, 1)'
+    let rightColor = 'rgba(255, 255, 255, 1)'
 
     let previousGradient
     let currentGradient
     let gradients = []
 
-    // Change background on click or space key
-    colorBtn.addEventListener('click', updateGradient)
-    document.body.onkeyup = function(e) {
-        if (e.keyCode == 32) updateGradient()
-    }
+    // Create random rgba
+    function randomRgba() {
+        let red = Math.floor(Math.random() * rgbaMax)
+        let green = Math.floor(Math.random() * rgbaMax)
+        let blue = Math.floor(Math.random() * rgbaMax)
 
-    function random(array) {
-        let randomIndex = Math.floor(Math.random() * array.length)
-        return randomIndex
+        return 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + opacity + ')'
     }
 
     function colorMatch() {
-        leftColor = colors[random(colors)]
-        rightColor = colors[random(colors)]
-        while (leftColor === rightColor) rightColor = colors[random(colors)]
+        leftColor = randomRgba()
+        rightColor = randomRgba()
+        while (leftColor === rightColor) rightColor = randomRgba()
     }
 
     function updateGradient() {
@@ -43,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
         colorContainer.style.backgroundImage = currentGradient
         gradients.push(currentGradient)
 
-        console.log('colorcombo: ' + leftColor + ' + ' + rightColor)
-        console.log('previousGradient: ' + previousGradient)
-        console.log('currentGradient: ' + currentGradient)
-        console.log(gradients)
-
     }
 
+    // Change background on click or space key
+    colorBtn.addEventListener('click', updateGradient)
+    document.body.onkeyup = function(e) {
+        if (e.keyCode == 32) updateGradient()
+    }
 
 })
