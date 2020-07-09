@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         firstColor = randomRgba()
         secondColor = randomRgba()
         while (firstColor === secondColor) secondColor = randomRgba()
-
-        colorBtn.style.color = firstColor
     }
 
     function updateGradient() {
@@ -44,8 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
             currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + firstColor + ' 0%, ' + secondColor + ' 100%)'
         }
 
-        background.style.backgroundImage = currentGradient
         gradients.push(currentGradient)
+
+        background.style.backgroundImage = currentGradient
+        colorBtn.style.color = firstColor
+        colorBtn.style.background = secondColor
 
 
     }
