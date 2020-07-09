@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM content
     const background = document.querySelector('body')
     const colorBtn = document.querySelector('#color-btn')
+    const copyCode = document.querySelector('code')
 
     let rgbaMax = 255
     let opacity = 1
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + opacity + ')'
     }
 
+    // Create random gradient degree
+    let randomDeg = () => Math.floor(Math.random() * 360)
+
     function colorMatch() {
         leftColor = randomRgba()
         rightColor = randomRgba()
@@ -32,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         colorMatch()
         previousGradient = gradients[gradients.length - 1]
-        currentGradient = 'linear-gradient(62deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
+        currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
 
         while (previousGradient === currentGradient) {
             colorMatch()
-            currentGradient = 'linear-gradient(62deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
+            currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
         }
 
         background.style.backgroundImage = currentGradient
