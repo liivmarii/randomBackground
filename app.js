@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentGradient
     let gradients = []
 
-    // Change background on click
+    // Change background on click or space key
     colorBtn.addEventListener('click', updateGradient)
+    document.body.onkeyup = function(e) {
+        if (e.keyCode == 32) updateGradient()
+    }
 
     function random(array) {
         let randomIndex = Math.floor(Math.random() * array.length)
