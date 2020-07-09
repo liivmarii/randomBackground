@@ -1,0 +1,48 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+
+//******************** font weights */
+$fontweight-light: 200
+$fontweight-normal: 400
+$fontweight-bold: 900
+//******************** font sizes */
+$fontsize-desktop: 1.6rem
+$fontsize-desktop-bigbtn: 2rem
+//******************** font line heights */
+$lineheight-default: 1.5
+//******************** font families */
+$fontfamily-default: 'Nunito', 'Helvetica Neue', 'Helvetica', Arial, sans-serif
+/********************* default styling */
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+html, body
+  height: 100%
+  width: 100%
+html
+  font-size: 62.5%
+body
+  font-weight: $fontweight-normal
+  font-size: $fontsize-desktop
+  line-height: $lineheight-default
+  font-family: $fontfamily-default
+
+/********************* random colour container */
+#bg-container
+  min-height: 100vh
+  min-width: 100vw
+  display: flex
+  justify-content: center
+  align-items: center
+  #color-btn
+    padding: 10px 20px
+    cursor: pointer
+    font-weight: $fontweight-light
+    font-size: $fontsize-desktop-bigbtn
+    font-family: $fontfamily-default
+    text-transform: uppercase
+    letter-spacing: 5px
+    outline: none
+  #color-btn:hover
+    opacity: .5
+
