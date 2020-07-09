@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let rgbaMax = 255
     let opacity = 1
-    let leftColor = 'rgba(255, 255, 255, 1)'
-    let rightColor = 'rgba(255, 255, 255, 1)'
+    let firstColor = 'rgba(255, 255, 255, 1)'
+    let secondColor = 'rgba(255, 255, 255, 1)'
 
     let previousGradient
     let currentGradient
@@ -26,20 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
     let randomDeg = () => Math.floor(Math.random() * 360)
 
     function colorMatch() {
-        leftColor = randomRgba()
-        rightColor = randomRgba()
-        while (leftColor === rightColor) rightColor = randomRgba()
+        firstColor = randomRgba()
+        secondColor = randomRgba()
+        while (firstColor === secondColor) secondColor = randomRgba()
+
+        colorBtn.style.color = firstColor
     }
 
     function updateGradient() {
 
         colorMatch()
         previousGradient = gradients[gradients.length - 1]
-        currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
+        currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + firstColor + ' 0%, ' + secondColor + ' 100%)'
 
         while (previousGradient === currentGradient) {
             colorMatch()
-            currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
+            currentGradient = 'linear-gradient(' + randomDeg() + 'deg, ' + firstColor + ' 0%, ' + secondColor + ' 100%)'
         }
 
         background.style.backgroundImage = currentGradient

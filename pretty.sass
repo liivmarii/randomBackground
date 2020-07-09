@@ -4,13 +4,19 @@
 $fontweight-light: 200
 $fontweight-normal: 400
 $fontweight-bold: 900
+
 //******************** font sizes */
 $fontsize-desktop: 1.6rem
 $fontsize-desktop-bigbtn: 3rem
+
 //******************** font line heights */
 $lineheight-default: 1.5
+
 //******************** font families */
 $fontfamily-default: 'Nunito', 'Helvetica Neue', 'Helvetica', Arial, sans-serif
+
+//******************** colour theory */
+$primary-light: #fcfcfc
 $shadow: 0 0 10px #474747
 /********************* default styling */
 *
@@ -28,7 +34,7 @@ body
   line-height: $lineheight-default
   font-family: $fontfamily-default
   color: #999
-  background-color: #1f1f1f
+  background-color: $primary-light
   background-size: cover
 /********************* random colour btn */
 #color-btn
@@ -45,13 +51,3 @@ body
   border-radius: 10px
 #color-btn:hover
   opacity: .8
-/********************* footer */
-footer
-  margin: 0 3vw 2vh 3vw
-  padding: 50px 30px
-  position: absolute
-  bottom: 0
-  width: 94vw
-  color: #CECFD1
-  background: linear-gradient(62deg, #44494d 0%, #555555 100%)
-  border-radius: 10px

@@ -19,7 +19,7 @@ body {
   line-height: 1.5;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   color: #999;
-  background-color: #1f1f1f;
+  background-color: #fcfcfc;
   background-size: cover;
 }
 
@@ -42,16 +42,4 @@ body {
   opacity: 0.8;
 }
 
-/********************* footer */
-footer {
-  margin: 0 3vw 2vh 3vw;
-  padding: 50px 30px;
-  position: absolute;
-  bottom: 0;
-  width: 94vw;
-  color: #CECFD1;
-  background: linear-gradient(62deg, #44494d 0%, #555555 100%);
-  border-radius: 10px;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=pretty.css.map */
