@@ -39,13 +39,13 @@ button {
   position: absolute;
   right: 0;
   padding: 10px;
-  font-size: 3rem;
 }
 #gradient #show-code ion-icon {
   color: #fff;
 }
-#gradient code {
+#gradient p {
   position: relative;
+  font-size: 1rem;
 }
 
 /********************* random colour btn */
