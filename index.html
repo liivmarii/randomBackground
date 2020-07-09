@@ -11,7 +11,16 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <div id="gradient"></div>
+    <div id="gradient">
+        <button id="show-code">
+            <ion-icon name="code-slash"></ion-icon>
+        </button>
+        <code>
+            background: <span id="moz-linear-gradient"></span>;<br>
+            background: <span id="webkit-linear-gradient"></span>;<br>
+            background: <span id="linear-gradient"></span>;<br>
+        </code>
+    </div>
     <div id="instructions">
         <button type="button" id="generate-gradient-btn">hit space to generate, or click me</button>
     </div>
