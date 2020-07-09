@@ -24,7 +24,7 @@ body {
 }
 
 /********************* random colour btn */
-#color-btn {
+#generate-gradient-btn {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 3rem;
@@ -37,7 +37,7 @@ body {
   border: none;
 }
 
-#color-btn:hover {
+#generate-gradient-btn:hover {
   opacity: 0.8;
 }
 

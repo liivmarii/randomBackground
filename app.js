@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DOM content
     const background = document.querySelector('body')
-    const colorBtn = document.querySelector('#color-btn')
+    const colorBtn = document.querySelector('#generate-gradient-btn')
 
     let rgbaMax = 255
     let opacity = 1
