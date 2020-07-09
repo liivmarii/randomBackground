@@ -1,29 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // DOM content
+    // DOM elements
     const background = document.querySelector('body')
     const colorBtn = document.querySelector('#generate-gradient-btn')
 
-    let rgbaMax = 255
+    // Create random gradient degree
+    let randomDeg = () => Math.floor(Math.random() * 360)
+
+    // Create random rgba
+    let rgbMax = 255
     let opacity = 1
+    let rgbValue = () => Math.floor(Math.random() * rgbMax)
+    let randomRgba = () => 'rgba(' + rgbValue() + ', ' + rgbValue() + ', ' + rgbValue() + ', ' + opacity + ')'
+
+    // Default first & second colour
     let firstColor = 'rgba(255, 255, 255, 1)'
     let secondColor = 'rgba(255, 255, 255, 1)'
 
     let previousGradient
     let currentGradient
     let gradients = []
-
-    // Create random rgba
-    function randomRgba() {
-        let red = Math.floor(Math.random() * rgbaMax)
-        let green = Math.floor(Math.random() * rgbaMax)
-        let blue = Math.floor(Math.random() * rgbaMax)
-
-        return 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + opacity + ')'
-    }
-
-    // Create random gradient degree
-    let randomDeg = () => Math.floor(Math.random() * 360)
 
     function colorMatch() {
         firstColor = randomRgba()
@@ -45,9 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         gradients.push(currentGradient)
 
         background.style.backgroundImage = currentGradient
-        colorBtn.style.color = firstColor
-        colorBtn.style.background = secondColor
 
+        colorBtn.style.color = firstColor
 
     }
 
