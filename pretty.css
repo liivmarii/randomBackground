@@ -27,14 +27,13 @@ body {
 #generate-gradient-btn {
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 5px;
   outline: none;
-  color: #CECFD1;
-  background: #fff;
-  border: none;
+  color: #7b7b7b;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
 }
 
 #generate-gradient-btn:hover {
