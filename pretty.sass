@@ -1,20 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
 
-//******************** font weights */
-$fontweight-light: 200
-$fontweight-normal: 400
-$fontweight-bold: 900
-
-//******************** font sizes */
-$fontsize-desktop: 1.6rem
-$fontsize-desktop-bigbtn: 1.8rem
-
-//******************** font line heights */
-$lineheight-default: 1.5
-
-//******************** font families */
-$fontfamily-default: 'Nunito', 'Helvetica Neue', 'Helvetica', Arial, sans-serif
-
+$default-fontfamily: 'Nunito', 'Helvetica Neue', 'Helvetica', Arial, sans-serif
 //******************** colour theory */
 $white: #fff
 $primary-light: #fcfcfc
@@ -24,29 +10,30 @@ $shadow: 0 0 10px #474747
   box-sizing: border-box
   margin: 0
   padding: 0
-html
-  font-size: 62.5%
 body
   height: 100vh
   width: 100vw
+  padding: 5vh 5vw
   overflow: hidden
-  font-weight: $fontweight-normal
-  font-size: $fontsize-desktop
-  line-height: $lineheight-default
-  font-family: $fontfamily-default
+  font: 400 2rem/1.5 $default-fontfamily
   color: #999
   background-color: $primary-light
   background-size: cover
+/********************* gradient container */
+#gradient
+  height: 50vh
+  width: 90vw
+  background: linear-gradient(62deg, rgb(100, 100, 100) 0%, rgb(210, 210, 210) 100%)
+  border-radius: 2px
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+
 /********************* random colour btn */
 #generate-gradient-btn
-  padding: 10px 20px
   cursor: pointer
-  font-size: $fontsize-desktop-bigbtn
-  font-family: $fontfamily-default
+  font-family: $default-fontfamily
+  color: rgb(100, 100, 100)
+  background: transparent
+  border: none
   outline: none
-  color: #7b7b7b
-  background: rgba(255, 255, 255, .5)
-  border: 2px solid rgba(255, 255, 255, .8)
-  border-radius: 10px
 #generate-gradient-btn:hover
   opacity: .8

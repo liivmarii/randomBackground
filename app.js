@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // DOM elements
-    const background = document.querySelector('body')
+    const background = document.querySelector('#gradient')
     const colorBtn = document.querySelector('#generate-gradient-btn')
 
     // Create random gradient degree
