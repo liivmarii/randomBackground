@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let randomRgba = () => 'rgba(' + rgbValue() + ', ' + rgbValue() + ', ' + rgbValue() + ', ' + opacity + ')'
 
     // Default first & second colour
-    let firstColor = 'rgba(255, 255, 255, 1)'
-    let secondColor = 'rgba(255, 255, 255, 1)'
+    let firstColor = 'rgba(100, 100, 100, 1)'
+    let secondColor = 'rgba(210, 210, 210, 1)'
 
     let previousGradient
     let currentGradient
