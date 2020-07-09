@@ -17,13 +17,35 @@ body {
   background-size: cover;
 }
 
+button {
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 /********************* gradient container */
 #gradient {
-  height: 50vh;
+  position: relative;
+  height: 80vh;
   width: 90vw;
   background: linear-gradient(62deg, #646464 0%, #d2d2d2 100%);
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #fff;
+}
+#gradient #show-code {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  font-size: 3rem;
+}
+#gradient #show-code ion-icon {
+  color: #fff;
+}
+#gradient code {
+  position: relative;
 }
 
 /********************* random colour btn */
@@ -31,9 +53,6 @@ body {
   cursor: pointer;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   color: #646464;
-  background: transparent;
-  border: none;
-  outline: none;
 }
 
 #generate-gradient-btn:hover {

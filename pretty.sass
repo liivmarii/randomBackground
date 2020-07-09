@@ -19,21 +19,35 @@ body
   color: #999
   background-color: $primary-light
   background-size: cover
+button
+  font-size: 1.2rem
+  background: transparent
+  border: none
+  outline: none
 /********************* gradient container */
 #gradient
-  height: 50vh
+  position: relative
+  height: 80vh
   width: 90vw
   background: linear-gradient(62deg, rgb(100, 100, 100) 0%, rgb(210, 210, 210) 100%)
   border-radius: 2px
   box-shadow: 0 0 10px rgba(0, 0, 0, .1)
-
+  overflow: hidden
+  color: #fff
+  #show-code
+    position: absolute
+    right: 0
+    padding: 10px
+    font-size: 3rem
+    ion-icon
+      color: #fff
+  code
+    position: relative
 /********************* random colour btn */
 #generate-gradient-btn
   cursor: pointer
   font-family: $default-fontfamily
   color: rgb(100, 100, 100)
-  background: transparent
-  border: none
-  outline: none
+
 #generate-gradient-btn:hover
   opacity: .8
