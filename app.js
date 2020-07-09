@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // DOM content
-    const colorContainer = document.querySelector('#bg-container')
+    const background = document.querySelector('body')
     const colorBtn = document.querySelector('#color-btn')
 
     let rgbaMax = 255
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentGradient = 'linear-gradient(62deg, ' + leftColor + ' 0%, ' + rightColor + ' 100%)'
         }
 
-        colorContainer.style.backgroundImage = currentGradient
+        background.style.backgroundImage = currentGradient
         gradients.push(currentGradient)
 
     }
