@@ -6,42 +6,52 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
 html {
   font-size: 62.5%;
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: #999;
+  background-color: #1f1f1f;
+  background-size: cover;
 }
 
-/********************* random colour container */
-#bg-container {
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#bg-container #color-btn {
+/********************* random colour btn */
+#color-btn {
   padding: 10px 20px;
   cursor: pointer;
-  font-weight: 200;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 5px;
   outline: none;
+  color: #CECFD1;
+  background: linear-gradient(62deg, #44494d 0%, #555555 100%);
+  border: none;
+  border-radius: 10px;
 }
-#bg-container #color-btn:hover {
-  opacity: 0.5;
+
+#color-btn:hover {
+  opacity: 0.8;
+}
+
+/********************* footer */
+footer {
+  margin: 0 3vw 2vh 3vw;
+  padding: 50px 30px;
+  position: absolute;
+  bottom: 0;
+  width: 94vw;
+  color: #CECFD1;
+  background: linear-gradient(62deg, #44494d 0%, #555555 100%);
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

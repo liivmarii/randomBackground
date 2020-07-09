@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM content
     const background = document.querySelector('body')
     const colorBtn = document.querySelector('#color-btn')
-    const copyCode = document.querySelector('code')
 
     let rgbaMax = 255
     let opacity = 1
@@ -45,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         background.style.backgroundImage = currentGradient
         gradients.push(currentGradient)
+
 
     }
 
