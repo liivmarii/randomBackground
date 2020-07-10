@@ -38,16 +38,19 @@ button {
   overflow: hidden;
   color: #fff;
 }
-#gradient #show-code {
+#gradient #btn-show-code, #gradient #btn-hide-code {
   position: absolute;
   top: 0;
   right: 0;
   padding: 20px;
   cursor: pointer;
 }
-#gradient #show-code ion-icon {
+#gradient #btn-show-code ion-icon, #gradient #btn-hide-code ion-icon {
   font-size: 3rem;
   color: #fff;
+}
+#gradient #btn-hide-code {
+  display: none;
 }
 #gradient p {
   position: relative;
@@ -66,7 +69,10 @@ button {
 }
 
 /********************* CSS colour gradients code snippet display */
-#display-code {
+#code-display {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.8s;
   position: relative;
   min-height: 50%;
   width: 80%;
@@ -76,15 +82,15 @@ button {
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0.6);
 }
-#display-code p {
+#code-display p {
   margin: 0 0 20px 0;
 }
-#display-code footer {
+#code-display footer {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#display-code footer button {
+#code-display footer button {
   padding: 0 10px;
   color: #fff;
   letter-spacing: 3px;

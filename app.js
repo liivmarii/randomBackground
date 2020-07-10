@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // DOM text nodes for code snippet
+    /*
     const mozGradient = document.querySelector('#moz-linear-gradient')
     const webkitGradient = document.querySelector('#webkit-linear-gradient')
     const defaultGradient = document.querySelector('#linear-gradient')
@@ -79,8 +80,34 @@ document.addEventListener('DOMContentLoaded', () => {
         webkitGradient.appendChild(webkitNode)
         defaultGradient.appendChild(defaultNode)
     }
+     */
 
     // Dynamic code section
+    const displayCodeBtn = document.querySelector('#btn-show-code')
+    const hideCodeBtn = document.querySelector('#btn-hide-code')
+    const codeDisplaySection = document.querySelector('#code-display')
+    const displayCssBtn = document.querySelector('#btn-display-css-code')
+    const displayAndroidBtn = document.querySelector('#btn-display-android-code')
+    const displayIosBtn = document.querySelector('#btn-display-ios-code')
+
+    displayCodeBtn.addEventListener('click', displayCode)
+    hideCodeBtn.addEventListener('click', hideCode)
+
+    function displayCode() {
+        codeDisplaySection.style.opacity = '1'
+        codeDisplaySection.style.pointerEvents = 'auto'
+
+        displayCodeBtn.style.display = 'none'
+        hideCodeBtn.style.display = 'block'
+    }
+
+    function hideCode() {
+        codeDisplaySection.style.opacity = '0'
+        codeDisplaySection.style.pointerEvents = 'none'
+
+        displayCodeBtn.style.display = 'block'
+        hideCodeBtn.style.display = 'none'
+    }
 
 
 })

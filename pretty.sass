@@ -36,7 +36,7 @@ button
   box-shadow: 0 0 10px rgba(0, 0, 0, .1)
   overflow: hidden
   color: #fff
-  #show-code
+  #btn-show-code, #btn-hide-code
     position: absolute
     top: 0
     right: 0
@@ -45,6 +45,8 @@ button
     ion-icon
       font-size: 3rem
       color: #fff
+  #btn-hide-code
+    display: none
   p
     position: relative
     font-size: 1rem
@@ -57,7 +59,10 @@ button
 #generate-gradient-btn:hover
   opacity: .8
 /********************* CSS colour gradients code snippet display */
-#display-code
+#code-display
+  opacity: 0
+  pointer-events: none
+  transition: .8s
   position: relative
   min-height: 50%
   width: 80%
