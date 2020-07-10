@@ -43,7 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         background.style.backgroundImage = currentGradient
         colorBtn.style.color = firstColor
 
-        updateTextNodes()
+        // Copy css to clipboard
+        let cssTextarea = document.querySelector('#css-values')
+        let webkit = '-webkit-' + currentGradient + '\n'
+        let moz = '-moz-' + currentGradient + '\n'
+
+        cssTextarea.innerHTML = webkit + moz + currentGradient
 
     }
 
@@ -75,33 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         displayCodeBtn.style.display = 'block'
         hideCodeBtn.style.display = 'none'
-    }
-
-    // DOM text nodes for code snippet
-    const mozGradient = document.querySelector('#moz-linear-gradient')
-    const webkitGradient = document.querySelector('#webkit-linear-gradient')
-    const defaultGradient = document.querySelector('#linear-gradient')
-
-    let mozNode = document.createTextNode('-moz-' + currentGradient)
-    let webkitNode = document.createTextNode('-webkit-' + currentGradient)
-    let defaultNode = document.createTextNode(currentGradient)
-
-    mozGradient.appendChild(mozNode)
-    webkitGradient.appendChild(webkitNode)
-    defaultGradient.appendChild(defaultNode)
-
-    function updateTextNodes() {
-        mozGradient.removeChild(mozNode)
-        webkitGradient.removeChild(webkitNode)
-        defaultGradient.removeChild(defaultNode)
-
-        mozNode = document.createTextNode('-moz-' + currentGradient)
-        webkitNode = document.createTextNode('-webkit-' + currentGradient)
-        defaultNode = document.createTextNode(currentGradient)
-
-        mozGradient.appendChild(mozNode)
-        webkitGradient.appendChild(webkitNode)
-        defaultGradient.appendChild(defaultNode)
     }
 
 })

@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta
+        name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="ie=edge"
+    >
     <title>Rainbow generator</title>
-    <link rel="stylesheet" href="pretty.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <link
+        rel="stylesheet"
+        href="pretty.css"
+    >
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+        nomodule=""
+        src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
+></script>
     <script src="app.js"></script>
 </head>
 <body>
@@ -20,15 +33,11 @@
             <ion-icon name="close"></ion-icon>
         </button>
         <section id="code-display">
-            <p>
-                background: <span id="moz-linear-gradient"></span>;
-            </p>
-            <p>
-                background: <span id="webkit-linear-gradient"></span>;
-            </p>
-            <p>
-                background: <span id="linear-gradient"></span>;
-            </p>
+            <textarea id="css-values">
+-webkit-linear-gradient(62deg, rgba(100, 100, 100, 1) 0%, rgba(210, 210, 210, 1) 100%)
+-moz-linear-gradient(62deg, rgba(100, 100, 100, 1) 0%, rgba(210, 210, 210, 1) 100%)
+linear-gradient(62deg, rgba(100, 100, 100, 1) 0%, rgba(210, 210, 210, 1) 100%)
+            </textarea>
             <footer>
                 <button id="btn-copy-code">
                     <ion-icon name="copy-outline"></ion-icon> copy css
@@ -37,7 +46,12 @@
         </section>
     </div>
     <div id="instructions">
-        <button type="button" id="generate-gradient-btn">hit space to generate, or click me</button>
+        <button
+            type="button"
+            id="generate-gradient-btn"
+        >
+            hit space to generate, or click me
+        </button>
     </div>
 </body>
 </html>
