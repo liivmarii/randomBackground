@@ -1,7 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-
+$rounded-box: 2px
 $default-fontfamily: 'Nunito', 'Helvetica Neue', 'Helvetica', Arial, sans-serif
-//******************** colour theory */
 $white: #fff
 $primary-light: #fcfcfc
 $shadow: 0 0 10px #474747
@@ -26,19 +25,25 @@ button
   outline: none
 /********************* gradient container */
 #gradient
+  display: flex
+  align-items: center
+  justify-content: center
   position: relative
   height: 80vh
   width: 90vw
   background: linear-gradient(62deg, rgb(100, 100, 100) 0%, rgb(210, 210, 210) 100%)
-  border-radius: 2px
+  border-radius: $rounded-box
   box-shadow: 0 0 10px rgba(0, 0, 0, .1)
   overflow: hidden
   color: #fff
   #show-code
     position: absolute
+    top: 0
     right: 0
-    padding: 10px
+    padding: 20px
+    cursor: pointer
     ion-icon
+      font-size: 3rem
       color: #fff
   p
     position: relative
@@ -51,3 +56,23 @@ button
 
 #generate-gradient-btn:hover
   opacity: .8
+/********************* CSS colour gradients code snippet display */
+#display-code
+  position: relative
+  min-height: 50%
+  width: 80%
+  margin: 5%
+  padding: 20px
+  border-radius: $rounded-box
+  border: 1px solid #fff
+  background: rgba(255, 255, 255, .6)
+  p
+    margin: 0 0 20px 0
+  footer
+    position: absolute
+    bottom: 0
+    right: 0
+    button
+      padding: 0 10px
+      color: #fff
+      letter-spacing: 3px

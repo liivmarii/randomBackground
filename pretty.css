@@ -26,6 +26,9 @@ button {
 
 /********************* gradient container */
 #gradient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 80vh;
   width: 90vw;
@@ -37,10 +40,13 @@ button {
 }
 #gradient #show-code {
   position: absolute;
+  top: 0;
   right: 0;
-  padding: 10px;
+  padding: 20px;
+  cursor: pointer;
 }
 #gradient #show-code ion-icon {
+  font-size: 3rem;
   color: #fff;
 }
 #gradient p {
@@ -57,6 +63,31 @@ button {
 
 #generate-gradient-btn:hover {
   opacity: 0.8;
+}
+
+/********************* CSS colour gradients code snippet display */
+#display-code {
+  position: relative;
+  min-height: 50%;
+  width: 80%;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.6);
+}
+#display-code p {
+  margin: 0 0 20px 0;
+}
+#display-code footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#display-code footer button {
+  padding: 0 10px;
+  color: #fff;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=pretty.css.map */
