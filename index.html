@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rainbow generator</title>
     <link rel="stylesheet" href="pretty.css">
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
@@ -19,7 +20,6 @@
             <ion-icon name="close"></ion-icon>
         </button>
         <section id="code-display">
-            <!--
             <p>
                 background: <span id="moz-linear-gradient"></span>;
             </p>
@@ -29,19 +29,9 @@
             <p>
                 background: <span id="linear-gradient"></span>;
             </p>
-            -->
             <footer>
                 <button id="btn-copy-code">
-                    <ion-icon name="copy-outline"></ion-icon>
-                </button>
-                <button id="btn-display-css-code">
-                    css
-                </button>
-                <button id="btn-display-android-code">
-                    android
-                </button>
-                <button id="btn-display-ios-code">
-                    ios
+                    <ion-icon name="copy-outline"></ion-icon> copy css
                 </button>
             </footer>
         </section>
