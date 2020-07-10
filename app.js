@@ -82,4 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
         hideCodeBtn.style.display = 'none'
     }
 
+    // Copy css code to clipboard
+    const copyCssBtn = document.querySelector('#btn-copy-css')
+    const cssTextarea = document.querySelector('#css-values')
+
+    copyCssBtn.addEventListener('click', copyToClipBoard)
+
+    function copyToClipBoard() {
+        document.body.appendChild(cssTextarea)
+        cssTextarea.select()
+        document.execCommand('copy')
+        document.body.removeChild(cssTextarea)
+    }
+
 })
