@@ -43,12 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         background.style.backgroundImage = currentGradient
         colorBtn.style.color = firstColor
 
-        // Copy css to clipboard
-        let cssTextarea = document.querySelector('#css-values')
-        let webkit = '-webkit-' + currentGradient + '\n'
-        let moz = '-moz-' + currentGradient + '\n'
-
-        cssTextarea.innerHTML = webkit + moz + currentGradient
+        updateTextarea()
 
     }
 
@@ -88,11 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copyCssBtn.addEventListener('click', copyToClipBoard)
 
-    function copyToClipBoard() {
-        document.body.appendChild(cssTextarea)
-        cssTextarea.select()
-        document.execCommand('copy')
-        document.body.removeChild(cssTextarea)
+    function updateTextarea() {
+        let cssTextarea = document.querySelector('#css-values')
+        let webkit = '-webkit-' + currentGradient + '\n'
+        let moz = '-moz-' + currentGradient + '\n'
+
+        cssTextarea.innerHTML = webkit + moz + currentGradient
     }
 
 })
